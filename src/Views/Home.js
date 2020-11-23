@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Services, Projects, About } from '../Sections';
+import Me from '../Me/index';
 
 const Wrapper = styled.div`
     color: #e8e6e6;
@@ -9,7 +10,7 @@ const Wrapper = styled.div`
 export default function Default() {
 	return (
 		<Wrapper>
-
+			<Me />
 			<Services />
 			<Projects />
 			<About />
