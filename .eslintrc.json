@@ -1,0 +1,47 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        // disable requiring trailing commas because it might be nice to revert to
+		// being JSON at some point, and I don't want to make big changes now.
+		"comma-dangle": 0,
+		"indent": [2, "tab"],
+		"no-tabs": 0,
+		"no-plusplus": 0,
+		"react/prop-types": 0,
+		"react/jsx-indent": [2, "tab"],
+		"react/jsx-indent-props": [2, "tab"],
+		"no-console": [1, { "allow": ["warn", "error"] }],
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+		"react/jsx-props-no-spreading": [0,{
+			"html": "enforce",
+			"custom": "enforce",
+			"explicitSpread": "enforce"
+		}],// Turn Back on eventually
+		"react/jsx-pascal-case": 0,
+		"camelcase": 0, // Turn Back on Eventually
+		"max-len": 0,
+		"no-underscore-dangle": 0,
+		"no-param-reassign": [1],
+		"no-shadow": [1],
+		"react/no-array-index-key": [0], // I don't like this setting, but it might be good
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.js", "**/*.spec.js", "./webpack/*.js"]}],
+        "linebreak-style": 0
+    }
+}
